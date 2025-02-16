@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="logstyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <body>
+    <div id="cursormov" ></div>
+
+    <div class="updiv">
+      <div class="container">
+        <div class="upindiv" id="upindiv1"><a href="index.html">HOME</a></div>
+        <div class="upindiv" id="upindiv2">
+          <a href="sports.html">SPORTS</a>
+        </div>
+        <div class="upindiv" id="upindiv3"><a href="event.html">EVENTS</a></div>
+        <div class="upindiv" id="upindiv4">
+          <a href="aboutus.html">ABOUT US</a>
+        </div>
+        <div class="upindiv" id="upindiv5"><a href="login.html">LOGIN</a></div>
+      </div>
+    </div>
+    <div class="logoimg">
+      <img id="logo" src="./images/bharatgovlogo.png" alt="" />
+    </div>
+    <div class="slider1">
+      <div class="one">
+        <div class="logo"><img src="./images/bharatgovlogo.png" alt=""></div>
+        <div class="text">Login using the form below.</div>
+      </div>
+      <div class="two"><label for="email"> Email</label><br>
+        <input type="email"><br>
+        <label for="password">Password</label><label id="fp" for="fpassword"><span>Forgot password?</span></label><br>
+        <input type="password"></div><br>
+      <div class="three"><button id="subbtn" type="submit">Login</button></div>
+      <div class="four"><hr></div>
+      <div class="five"><button id="goog" type="button"><img id="small" src="./images/search.png" alt="">Continue with Google</button>
+    <br>
+<p>Don't have account? <span id="c" >Sign Up</span></p>
+</div>
+    </div>
+    <div class="slider2">
+        <div class="onee">
+            <div class="logoo"><img src="./images/bharatgovlogo.png" alt=""></div>
+            <div class="textt">Sign-up using the form below.</div>
+          </div>
+          <div class="twoo"><label for="email"> Email</label><br>
+        <input type="email"><br>
+        <label for="password">Password</label><label id="fp"  for="fpassword"><span>Forgot password?</span></label><br>
+        <input type="password"></div><br>
+          <div class="threee"><button id="subbtn2" type="submit"><a href="regi.html">Sign Up</a></button></div>
+          <div class="fourr"><hr></div>
+          <div class="fivee"><button id="goog" type="button"><img id="small" src="./images/search.png" alt="">Continue with Google</button>
+        <br>
+    <p>Already have account? <span  id="c" >Login</span></p>
+    </div>
+        </div>
+    </div>
+
+
+    <script src="log.js">
+
+    </script>
+<script>
+  const cursor = document.getElementById("cursormov")
+
+let mouseX = 0;
+let mouseY=0;
+let cursorX=0;
+let cursorY=0;
+let delay = 0.1;
+
+document.addEventListener('mousemove',function(e){
+    mouseX=e.pageX;
+    mouseY=e.pageY;
+    if(e.target.id === "") {
+  cursor.style.backgroundColor = "gray";
+} else {
+  cursor.style.backgroundColor = "black";
+}
+
+})
+
+function ani(){
+
+cursorX=mouseX
+cursorY=mouseY
+
+cursor.style.transform =`translate(${cursorX-15}px,${cursorY-115}px)`;
+requestAnimationFrame(ani);
+}
+
+ani();
+
+
+</script>
+
+
+
+  </body>
+ 
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sports Government of India</title>
+    <link rel="stylesheet" href="about.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo">🏆 Sports Authority of India</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>About Us</h1>
+        <p>Building a stronger sports culture for India’s future.</p>
+    </section>
+
+    <section class="content">
+        <h2>Our Mission & Vision</h2>
+        <p>To develop a world-class sports ecosystem in India, fostering excellence and empowering athletes to shine on global platforms.</p>
+
+        <h2>Our Key Initiatives</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Khelo India</h3>
+                <p>A grassroots sports development program aimed at identifying and nurturing young talent.</p>
+            </div>
+            <div class="card">
+                <h3>Talent Development</h3>
+                <p>Scouting and training young athletes to represent India at national and international levels.</p>
+            </div>
+            <div class="card">
+                <h3>Infrastructure</h3>
+                <p>Building and upgrading world-class sports facilities across the country.</p>
+            </div>
+            <div class="card">
+                <h3>Global Representation</h3>
+                <p>Supporting Indian athletes in global sports events such as the Olympics, Commonwealth Games, and Asian Games.</p>
+            </div>
+        </div>
+
+        <h2>Leadership & Governance</h2>
+        <p>We operate under the Ministry of Youth Affairs and Sports, working with national and state-level sports federations to implement policies effectively.</p>
+
+        <h2>Contact Us</h2>
+        <div class="contact">
+            <p>📍 <b>Head Office:</b> New Delhi, India</p>
+            <p>📞 <b>Phone:</b> +91 9876543210</p>
+            <p>📧 <b>Email:</b> contact@sportsauthority.in</p>
+            <p>🌐 <b>Website:</b> www.sportsauthority.in</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Sports Authority of India. All Rights Reserved.</p>
+    </footer>
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        card.addEventListener("mouseover", () => {
+            card.style.backgroundColor = "#004aad";
+            card.style.color = "white";
+            card.querySelector("h3").style.color = "#ffcc00";
+        });
+
+        card.addEventListener("mouseout", () => {
+            card.style.backgroundColor = "#ffcc00";
+            card.style.color = "black";
+            card.querySelector("h3").style.color = "#004aad";
+        });
+    });
+});
+</script>
+</html>

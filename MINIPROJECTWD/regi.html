@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Sports Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Monoton&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+ES+Deco+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0px;
+            cursor: none;
+            background-image: url(./images/regibg.jpg);
+            background-size: 52%;
+            background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-left: 51.5vw;
+        }
+        #cursormov{
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+pointer-events: none;
+z-index: 100;
+transition: transform 0.1 linear;
+}
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"], input[type="email"], input[type="date"], input[type="password"], input[type="file"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+#logo{
+  position: fixed;
+  top: -7%;
+  left: 0%;
+  width: 155px;
+  z-index: 10;
+  }
+ .containerr{
+    position: sticky;
+  border: 1px solid rgb(250, 250, 250);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns:auto auto auto auto auto;
+  width:60%;
+  margin-top: 40px;
+  z-index: 12;
+  margin-left: 275px;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgb(169, 169, 169);
+  
+
+ }
+ .updiv{
+    position: sticky;
+ }
+ .upindiv{
+ 
+  margin:  5px 10px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  padding-bottom: 5px;
+  transition: 0.1s;
+ }
+a{
+  text-decoration: none;
+  color: black;
+}
+/* #upindiv1{
+  border-bottom: 2px solid blue;
+
+} */
+.upindiv:hover{
+border-bottom: 2px solid #f9d84b;
+}
+    </style>
+   
+</head>
+<body>
+    <div id="cursormov" ></div>
+    <div class="logoimgani"> 
+        <img id="logo" src="./images/bharatgovlogo.png" alt="" />
+      </div>
+      <div class="updiv">
+        <div class="containerr">
+          <div class="upindiv" id="upindiv1"><a href="index.html">HOME</a></div>
+          <div class="upindiv" id="upindiv2">
+            <a href="sportsn.html">SPORTS</a>
+          </div>
+          <div class="upindiv" id="upindiv3"><a href="">EVENTS</a></div>
+          <div class="upindiv" id="upindiv4">
+            <a href="aboutus.html">ABOUT US</a>
+          </div>
+          <div class="upindiv" id="upindiv5"><a href="login.html">LOGIN</a></div>
+        </div>
+      </div>
+    <div class="container">
+        <h2>Government Sports Registration Form</h2>
+        <form action="/register" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nationality">Nationality</label>
+                <input type="text" id="nationality" name="nationality" required>
+            </div>
+            <div class="form-group">
+                <label for="gov_id">Government-issued ID Number</label>
+                <input type="text" id="gov_id" name="gov_id" required>
+                <div id="gov_id_error" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="pan_number">PAN Number</label>
+                <input type="text" id="pan_number" name="pan_number" required>
+                <div id="pan_number_error" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="blood_group">Blood Group</label>
+                <input type="text" id="blood_group" name="blood_group" required>
+                <div id="blood_group_error" class="error"></div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <div id="email_error" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Mobile Number</label>
+                <input type="text" id="phone" name="phone" required>
+                <div id="phone_error" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="alt_phone">Alternate Contact Number</label>
+                <input type="text" id="alt_phone" name="alt_phone">
+            </div>
+            <div class="form-group">
+                <label for="permanent_address">Permanent Address</label>
+                <textarea id="permanent_address" name="permanent_address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="same_address" name="same_address">
+                <label for="same_address">Current Address is same as Permanent Address</label>
+            </div>
+            <div class="form-group">
+                <label for="current_address">Current Address</label>
+                <textarea id="current_address" name="current_address" rows="3"></textarea>
+            </div>
+
+            <!-- Sports Information -->
+            <div class="form-group">
+                <label for="sports">Preferred Sport(s)</label>
+                <select id="sports" name="sports[]" multiple required>
+                    <option value="Football">Football</option>
+                    <option value="Basketball">Basketball</option>
+                    <option value="Cricket">Cricket</option>
+                    <option value="Athletics">Athletics</option>
+                    <option value="Swimming">Swimming</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="skill_level">Skill Level</label>
+                <select id="skill_level" name="skill_level" required>
+                    <option value="">Select Level</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Previous Participation</label><br>
+                <input type="checkbox" id="national" name="participation[]" value="National">
+                <label for="national">National Level</label><br>
+                <input type="checkbox" id="state" name="participation[]" value="State">
+                <label for="state">State Level</label><br>
+                <input type="checkbox" id="district" name="participation[]" value="District">
+                <label for="district">District Level</label>
+            </div>
+            <div class="form-group">
+                <label for="achievements">Achievements/Certifications</label>
+                <input type="file" id="achievements" name="achievements">
+            </div>
+
+            <!-- Health & Emergency -->
+            <div class="form-group">
+                <label for="medical_conditions">Medical Conditions (if any)</label>
+                <textarea id="medical_conditions" name="medical_conditions" rows="2"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="emergency_contact">Emergency Contact Name</label>
+                <input type="text" id="emergency_contact" name="emergency_contact" required>
+            </div>
+            <div class="form-group">
+                <label for="emergency_number">Emergency Contact Number</label>
+                <input type="text" id="emergency_number" name="emergency_number" required>
+                <div id="emergency_number_error" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="fitness_certificate">Upload Fitness Certificate</label>
+                <input type="file" id="fitness_certificate" name="fitness_certificate">
+            </div>
+
+            <!-- Account Credentials -->
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <div id="password_error" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+                <div id="confirm_password_error" class="error"></div>
+            </div>
+
+            <!-- Agreements -->
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the Terms and Conditions</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="data_consent" name="data_consent" required>
+                <label for="data_consent">I consent to the use of my data for registration purposes</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="authenticity" name="authenticity" required>
+                <label for="authenticity">I declare that the information provided is true and authentic</label>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    const cursor = document.getElementById("cursormov")
+    
+    let mouseX = 0;
+    let mouseY=0;
+    let cursorX=0;
+    let cursorY=0;
+    let delay = 0.1;
+    
+    document.addEventListener('mousemove',function(e){
+        mouseX=e.pageX;
+        mouseY=e.pageY;
+    })
+    
+    function ani(){
+    
+    cursorX=mouseX
+    cursorY=mouseY
+    
+    cursor.style.transform =`translate(${cursorX-10}px,${cursorY-50}px)`;
+    requestAnimationFrame(ani);
+    }
+    
+    ani();
+    
+    function validateForm() {
+            let isValid = true;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const govId = document.getElementById('gov_id').value;
+            const emergencyNumber = document.getElementById('emergency_number').value;
+            const panNumber = document.getElementById('pan_number').value;
+            const bloodGroup = document.getElementById('blood_group').value;
+
+            // Clear previous errors
+            document.querySelectorAll('.error').forEach(e => e.textContent = '');
+
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('email_error').textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+
+            // Phone validation (10 digits)
+            const phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phone)) {
+                document.getElementById('phone_error').textContent = 'Please enter a valid 10-digit mobile number.';
+                isValid = false;
+            }
+
+            // Government ID validation (minimum 6 characters)
+            if (govId.length < 6) {
+                document.getElementById('gov_id_error').textContent = 'Government ID must be at least 6 characters long.';
+                isValid = false;
+            }
+
+            // Emergency Contact Number validation
+            if (!phonePattern.test(emergencyNumber)) {
+                document.getElementById('emergency_number_error').textContent = 'Please enter a valid 10-digit emergency contact number.';
+                isValid = false;
+            }
+
+            // PAN Number validation (5 letters, 4 digits, 1 letter)
+            const panPattern = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+            if (!panPattern.test(panNumber)) {
+                document.getElementById('pan_number_error').textContent = 'Please enter a valid PAN number (e.g., ABCDE1234F).';
+                isValid = false;
+            }
+
+            // Blood Group validation
+            const bloodGroupPattern = /^(A|B|AB|O)[+-]$/;
+            if (!bloodGroupPattern.test(bloodGroup)) {
+                document.getElementById('blood_group_error').textContent = 'Please enter a valid blood group (e.g., A+, O-).';
+                isValid = false;
+            }
+
+            // Password validation
+            if (password.length < 6) {
+                document.getElementById('password_error').textContent = 'Password must be at least 6 characters long.';
+                isValid = false;
+            }
+
+            // Confirm password validation
+            if (password !== confirmPassword) {
+                document.getElementById('confirm_password_error').textContent = 'Passwords do not match.';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        // Auto-fill current address if checkbox is checked
+        document.addEventListener('DOMContentLoaded', function() {
+            const sameAddressCheckbox = document.getElementById('same_address');
+            const permanentAddress = document.getElementById('permanent_address');
+            const currentAddress = document.getElementById('current_address');
+
+            sameAddressCheckbox.addEventListener('change', function() {
+                if (this.checked) {
+                    currentAddress.value = permanentAddress.value;
+                    currentAddress.setAttribute('readonly', true);
+                } else {
+                    currentAddress.value = '';
+                    currentAddress.removeAttribute('readonly');
+                }
+            });
+
+            // Update current address if permanent address changes and checkbox is checked
+            permanentAddress.addEventListener('input', function() {
+                if (sameAddressCheckbox.checked) {
+                    currentAddress.value = permanentAddress.value;
+                }
+            });
+        });
+    
+           
+        </script>
+</html>

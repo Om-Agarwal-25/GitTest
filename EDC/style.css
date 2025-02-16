@@ -1,0 +1,314 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1E90FF; /* Set background to blue */
+    color: #fff; /* Keep text color white */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #00008B; /* Set background to dark blue */
+    color: #fff; /* Set text color to white */
+    padding: 10px 0; /* Reduce padding */
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: #333; /* Example color */
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color: #fff;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+}
+
+.navbar-logo {
+    height: 40px;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-item {
+    margin-left: 20px;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.navbar-link:hover {
+    background-color: #575757;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+nav .logo img {
+    height: 40px; /* Reduce logo size */
+    width: 40px;
+    object-fit: cover;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline; /* Align list items horizontally */
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff; /* Set link color to white */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+/* Main Styles */
+main {
+    flex: 1;
+    margin-top: 60px; /* Adjust margin for smaller navbar */
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: #f4f4f4; /* Example color */
+    color: #333;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.events-grid {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.event {
+    background-color: blue; /* Set background to a lighter blue */
+    border: 1px solid #fff; /* Add white border */
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.event-item {
+    flex: 1 1 calc(25% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.event img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.event-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.event h3 {
+    margin: 10px 0;
+    color: #fff; /* Set heading color to white */
+}
+
+.event p {
+    font-size: 14px;
+    color: #ccc; /* Set paragraph color to light gray */
+}
+
+/* Startups Section */
+.startups-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.startup-item {
+    background-color: #00008B; /* Set background to dark blue */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.startup-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.team-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.team-member {
+    background-color: #00008B; /* Set background to dark blue */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.team-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #00008B; /* Set background to dark blue */
+    color: #fff; /* Set text color to white */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+.footer {
+    background-color: #333; /* Example color */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background: #00008B; /* Set background to dark blue */
+        position: absolute;
+        top: 50px; /* Adjust position for smaller navbar */
+        width: 100%;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-item {
+        margin: 0;
+    }
+
+    .navbar-link {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .startups-grid {
+        flex-direction: column;
+    }
+
+    .team-grid {
+        flex-direction: column;
+    }
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Adjust height for smaller logo */
+    flex-shrink: 0;
+}

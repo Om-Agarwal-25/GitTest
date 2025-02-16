@@ -1,0 +1,499 @@
+/* .fonts{
+ poppinsmain 
+    font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+
+ playausa_Reviiew 
+  font-family: "Playwrite AU SA", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+
+  robotoHeading 
+  font-family: "Roboto Condensed", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+
+.colorpallete{
+    white
+    black 
+    #
+    #
+    #
+    
+} */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color:rgb(255, 255, 255);
+  cursor: none;
+  scroll-snap-type: y mandatory;
+}
+
+#cursormov{
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+pointer-events: none;
+z-index: 100;
+transition: transform 0.1 linear;
+}
+#anilogo{
+  position: absolute;
+  margin-left: 580px;
+  /* margin-top: -50px; */
+  animation: logoanistart 1.5s linear ;
+  animation-fill-mode: forwards;
+
+}
+#logo{
+  position: fixed;
+  top: -7%;
+  left: 0%;
+  width: 155px;
+  opacity: 0;
+  animation: opac 2s linear;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  z-index: 10;
+  }
+ .container{
+  border: 1px solid rgb(250, 250, 250);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns:auto auto auto auto auto;
+  width:60%;
+  margin-top: -80px;
+  z-index: 2;
+  margin-left: 275px;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgb(169, 169, 169);
+  opacity: 0;
+  position: fixed;
+  animation: opac 2s linear;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+
+ }
+ .upindiv{
+ 
+  margin:  5px 10px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  padding-bottom: 5px;
+  transition: 0.1s;
+ }
+a{
+  text-decoration: none;
+  color: black;
+}
+/* #upindiv1{
+  border-bottom: 2px solid blue;
+
+} */
+.upindiv:hover{
+border-bottom: 2px solid #f9d84b;
+}
+
+@keyframes logoanistart {
+  0%{opacity: 1;}
+  50%{opacity: 1;}
+  75%{opacity: 0.5;}
+  100%{opacity: 0;}  
+}
+@keyframes opac {
+  0%{opacity: 0;}
+  50%{opacity: 0;}
+  75%{opacity: 0.5;}
+  100%{opacity: 1;}  
+}
+.slider {
+  width: 80%;
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 130px;
+ left: 21%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: opac 2s linear;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+  animation: slideAnimation 20s infinite ease-in-out;
+ animation-direction: alternate-reverse;
+}
+
+.slide {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.slide img {
+  width: 100%;
+  transition: transform 0.3s ease;
+ 
+}
+
+/* Hover Effect */
+.slide img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Keyframes for Animation */
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  16.5% {
+    transform: translateX(-25%);
+  }
+  33% {
+      transform: translateX(-50%);
+    }
+  50% {
+    transform: translateX(-75%);
+  }
+  66.5% {
+    transform: translateX(-50%);
+  }
+  83% {
+      transform: translateX(-25%);
+    }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.container2{
+  display: grid;
+  grid-template-columns: 35% 35% ;
+  grid-template-rows: 100px 100px 100px 100px 100px  100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+  gap: 10px 10px;
+  position: relative;
+  margin-top: 100px;
+  left: 17%;
+  opacity: 0;
+  animation: opac 2s linear;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;;
+  
+}
+.boxt{
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  border-radius: 10px;
+
+}
+#boxt1{
+  
+  padding-left: 5px;
+  grid-area: 1/1/3/2;
+  background-image: url(./images/logo_olympics.svg);
+  background-size: cover;
+}
+#boxt2{
+ text-align: center;
+ font-size: 50px;
+}
+.up{
+  margin-top: -35px;
+}
+#boxt3{
+ text-align: center;
+ font-size: 95px;
+}
+#boxt4{
+  grid-area: 2/2/4/3;
+  background-image: url(./images/logo_kheloindia.png);
+  background-size: cover;
+  
+} 
+#boxt5{
+  text-align: center;
+  font-size: 50px;
+  grid-area: 4/1/6/2;
+ }
+ #boxt6{
+  text-align: center;
+  font-size: 50px;
+ }
+ #boxt7{
+  text-align: center;
+  font-size: 50px;
+  background-image: url(./images/HOCC.jpg);
+  background-size: cover;
+  grid-area: 5/2/7/3;
+ }
+ #boxt8{
+  text-align: center;
+  font-size: 50px;
+  background-image: url(./images/kaba.jpg);
+  background-size: 99%;
+  
+ }
+ #boxt9{
+  text-align: center;
+  font-size: 50px;
+  
+  grid-area: 7/1/9/2;
+ }
+ #boxt10{
+  text-align: center;
+  font-size: 50px;
+  background-image: url(./images/HOCC2.jpg);
+  background-size: cover;
+ }
+ #boxt11{
+  text-align: center;
+  font-size: 50px;
+  
+  grid-area: 8/2/10/3;
+ }
+ #boxt12{
+  text-align: center;
+  font-size: 50px;
+  background-image: url(./images/VOLL.jpg);
+  background-size: cover;
+ 
+ }
+ #boxt13{
+  text-align: center;
+  font-size: 50px;
+  
+  
+ }
+ 
+ #boxt14{
+  text-align: center;
+  font-size: 50px;
+  grid-area: 10/1/12/2;
+  background-image: url(./images/VOLL2.jpg);
+  background-size: cover;
+ }
+ 
+ #boxt15{
+  text-align: center;
+  font-size: 50px;
+  grid-area: 11/2/13/3 ;
+  background-image: url(./images/ipltro.jpg);
+  background-size: cover;
+ }
+ 
+ #boxt16{
+  text-align: center;
+  font-size: 50px;
+  background-image: url(./images/VOLL3.jpg);
+  background-size: cover;
+ }
+ 
+ #boxt17{
+  text-align: center;
+  font-size: 50px;
+  grid-area: 13/1/15/2;
+ }
+ 
+ #boxt18{
+  background-image: url(./images/ipltrocopy.jpg);
+  background-size: cover;
+  text-align: center;
+  font-size: 50px;
+  
+ }
+ 
+ #boxt19{
+  text-align: center;
+  font-size: 50px;
+  grid-area: 14/2/16/3;
+ }
+ 
+ #boxt20{
+  text-align: center;
+  font-size: 30px;
+  background-image: url(./images/CHESS.jpg);
+  background-size: cover;
+  
+ }
+ .marquee-content {
+  display: flex;
+  gap: 1rem;
+  animation: scroll 10s linear infinite;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.marquee-content1 {
+  display: flex;
+  gap: 1rem;
+  animation: scroll2 10s linear infinite;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+h1{
+  font-size: 50px;
+  margin: 0 50px;
+}
+/* Horizontal Marquee */
+.horizontal-marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #fff;
+   box-shadow: 1px 1px 10px rgb(169, 169, 169);
+  padding: 1rem 0;
+  transform: rotate(5deg);
+}
+.horizontal-marquee1 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #fff;
+  transform: rotate(5deg);
+   box-shadow: 1px 1px 10px rgb(169, 169, 169);
+  padding: 1rem 0;
+}
+
+.marquee-content1 {
+  animation-duration: 20s; /* Controls speed */
+}
+
+
+/* Angled Marquee */
+.angled-marquee {
+  width: 110%;
+  overflow: hidden;
+  white-space: nowrap;
+  transform: rotate(-7deg);
+  background: #fff;
+   box-shadow: 1px 1px 10px rgb(169, 169, 169);
+  padding: 1rem 0;
+}
+
+.angled-marquee .marquee-content {
+  animation-duration: 18s; /* Adjust speed */
+}
+
+/* Keyframes */
+@keyframes scroll {
+  0% {
+    transform: translateX(50%);
+  }
+  90%{
+      transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translateX(-50%);
+  }
+  90%{
+      transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.javelin{
+  height: 110vh;
+  background-image: url(./images/javel.jpg);
+  background-size: cover;
+  margin-top: 30px;
+  transition: 1s;
+}
+.worldcup{
+  height: 110vh;
+  background-image: url(./images/cric.jpg);
+  background-size: cover;
+  transition: 1s;
+}
+.run{
+  height: 110vh;
+  background-image: url(./images/milkha.jpg);
+  background-size: cover;
+  transition: 1s;
+}
+.dhoni{
+  height: 110vh;
+  background-image: url(./images/dhoni.jpg);
+  background-size: cover;
+  transition: 1s;
+}
+.pvsin{
+  height: 110vh;
+  background-image: url(./images/pvsindhu.jpg);
+  background-size: cover;
+  transition: 1s;
+}
+
+.pvsin:hover, .dhoni:hover,.run:hover,.worldcup:hover,.javelin:hover{
+  filter: brightness(1.5);
+  scale: 1.1;
+}
+ .headd{
+  color: #fff;
+  font-size: 100px;
+  font-family: "Roboto Condensed", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-weight: bolder;
+  margin-left: 60px;
+  
+
+
+ }
+ .headdi{
+  color: #fff;
+  font-size: 100px;
+  font-family: "Roboto Condensed", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-weight: bolder;
+  text-align: right;
+  margin-right: 60px;
+  
+ }
+ .super{
+  margin-top: 50px;
+  font-size: 200px;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0 20px;
+  transition: 1s;
+  border-radius: 10px;
+
+  
+ }
+ .super:hover{
+  background-color: #000;
+  color: #fff;
+
+ }
+
+ .upp{
+  margin-top: -150px;
+ }
